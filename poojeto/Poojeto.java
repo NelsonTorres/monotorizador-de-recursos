@@ -88,6 +88,11 @@ public class Poojeto {
                             a = new PopupThread(str,mapa,p);
                             a.run();
                             }
+                        else {
+                            if(p.getDecisao()!=null){
+                                System.out.println(p.getDecisao());
+                                }
+                            }
                         str=null;
                         }
                     }

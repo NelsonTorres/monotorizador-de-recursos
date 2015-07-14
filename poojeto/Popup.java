@@ -62,7 +62,10 @@ public class Popup extends javax.swing.JDialog implements Runnable{
         i=str.length()%10;
         tam[2]=(i+"").toString().charAt(0);
         tam[3]='\0';
-
+        if (jRadioButton2.isSelected()){
+            Processo o = lista.get(gPid);
+	    o.setDecisao(tam+str);
+        }
         try{
             System.out.print(tam);
             System.out.print(str);
@@ -75,6 +78,7 @@ public class Popup extends javax.swing.JDialog implements Runnable{
         String cpu=p.getCpu();
         String mem=p.getMem();
         String user=p.getUser();
+        String decisao = p.getDecisao();
         int mode= p.getMode();
         
         if(mode==0){
